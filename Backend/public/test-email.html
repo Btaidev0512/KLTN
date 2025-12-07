@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧪 Test Email - Badminton Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #E95211 0%, #ff6b35 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .test-section {
+            margin-bottom: 40px;
+        }
+
+        .test-section h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .test-section h2 .icon {
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        input[type="email"],
+        input[type="text"] {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+
+        input[type="email"]:focus,
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #E95211;
+            box-shadow: 0 0 0 3px rgba(233, 82, 17, 0.1);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #E95211 0%, #ff6b35 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(233, 82, 17, 0.4);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .alert {
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .alert.show {
+            display: block;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+
+        .alert-error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+
+        .alert-info {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            color: #0c5460;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #e0e0e0, transparent);
+            margin: 40px 0;
+        }
+
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .info-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #E95211;
+            margin-bottom: 30px;
+        }
+
+        .info-box h3 {
+            font-size: 16px;
+            color: #E95211;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .info-box ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .info-box li {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .response-box {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: #333;
+            max-height: 300px;
+            overflow-y: auto;
+            display: none;
+        }
+
+        .response-box.show {
+            display: block;
+        }
+
+        .response-box pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        @media (max-width: 640px) {
+            .content {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧪 Test Email System</h1>
+            <p>Badminton Store - Password Reset Testing</p>
+        </div>
+
+        <div class="content">
+            <!-- Info Box -->
+            <div class="info-box">
+                <h3>📋 Hướng dẫn sử dụng</h3>
+                <p>Trang này giúp bạn test chức năng gửi email quên mật khẩu:</p>
+                <ul>
+                    <li><strong>Test 1:</strong> Nhập email có trong database → Gửi email reset password</li>
+                    <li><strong>Test 2:</strong> Nhập token từ email + mật khẩu mới → Đặt lại mật khẩu</li>
+                    <li><strong>Lưu ý:</strong> Kiểm tra cả folder Spam nếu không thấy email!</li>
+                </ul>
+            </div>
+
+            <!-- TEST 1: Forgot Password -->
+            <div class="test-section">
+                <h2>
+                    <span class="icon">📧</span>
+                    Test 1: Gửi Email Quên Mật Khẩu
+                </h2>
+
+                <form id="forgotPasswordForm">
+                    <div class="form-group">
+                        <label for="email">Email của bạn:</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="vd: tainguyen@gmail.com"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="sendEmailBtn">
+                        <span id="sendEmailText">Gửi Email Reset Password</span>
+                        <div class="spinner" id="sendEmailSpinner" style="display: none;"></div>
+                    </button>
+
+                    <div class="alert" id="forgotPasswordAlert"></div>
+                    <div class="response-box" id="forgotPasswordResponse"></div>
+                </form>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- TEST 2: Reset Password -->
+            <div class="test-section">
+                <h2>
+                    <span class="icon">🔐</span>
+                    Test 2: Đặt Lại Mật Khẩu
+                </h2>
+
+                <form id="resetPasswordForm">
+                    <div class="form-group">
+                        <label for="token">Token từ email:</label>
+                        <input 
+                            type="text" 
+                            id="token" 
+                            name="token" 
+                            placeholder="Paste token 64 ký tự từ email vào đây"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="newPassword">Mật khẩu mới:</label>
+                        <input 
+                            type="text" 
+                            id="newPassword" 
+                            name="newPassword" 
+                            placeholder="Nhập mật khẩu mới (tối thiểu 6 ký tự)"
+                            required
+                            minlength="6"
+                        >
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="resetPasswordBtn">
+                        <span id="resetPasswordText">Đặt Lại Mật Khẩu</span>
+                        <div class="spinner" id="resetPasswordSpinner" style="display: none;"></div>
+                    </button>
+
+                    <div class="alert" id="resetPasswordAlert"></div>
+                    <div class="response-box" id="resetPasswordResponse"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // API Base URL
+        const API_URL = 'http://localhost:5000/api/auth';
+
+        // Helper functions
+        function showAlert(alertId, message, type) {
+            const alert = document.getElementById(alertId);
+            alert.className = `alert alert-${type} show`;
+            alert.textContent = message;
+            
+            setTimeout(() => {
+                alert.classList.remove('show');
+            }, 8000);
+        }
+
+        function showResponse(responseId, data) {
+            const responseBox = document.getElementById(responseId);
+            responseBox.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+            responseBox.classList.add('show');
+        }
+
+        function setLoading(btnId, spinnerId, textId, isLoading) {
+            const btn = document.getElementById(btnId);
+            const spinner = document.getElementById(spinnerId);
+            const text = document.getElementById(textId);
+            
+            btn.disabled = isLoading;
+            spinner.style.display = isLoading ? 'block' : 'none';
+            text.style.display = isLoading ? 'none' : 'block';
+        }
+
+        // TEST 1: Forgot Password
+        document.getElementById('forgotPasswordForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            
+            setLoading('sendEmailBtn', 'sendEmailSpinner', 'sendEmailText', true);
+            
+            try {
+                const response = await fetch(`${API_URL}/forgot-password`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email })
+                });
+
+                const data = await response.json();
+                showResponse('forgotPasswordResponse', data);
+
+                if (response.ok && data.success) {
+                    showAlert('forgotPasswordAlert', 
+                        '✅ ' + (data.message || 'Email đã được gửi! Kiểm tra hộp thư của bạn (cả folder Spam).'), 
+                        'success'
+                    );
+                } else {
+                    showAlert('forgotPasswordAlert', 
+                        '❌ ' + (data.message || 'Có lỗi xảy ra khi gửi email.'), 
+                        'error'
+                    );
+                }
+            } catch (error) {
+                showAlert('forgotPasswordAlert', 
+                    '❌ Lỗi kết nối: ' + error.message + '. Đảm bảo server đang chạy trên http://localhost:5000', 
+                    'error'
+                );
+                showResponse('forgotPasswordResponse', { error: error.message });
+            } finally {
+                setLoading('sendEmailBtn', 'sendEmailSpinner', 'sendEmailText', false);
+            }
+        });
+
+        // TEST 2: Reset Password
+        document.getElementById('resetPasswordForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const token = document.getElementById('token').value.trim();
+            const newPassword = document.getElementById('newPassword').value;
+            
+            if (newPassword.length < 6) {
+                showAlert('resetPasswordAlert', '❌ Mật khẩu phải có ít nhất 6 ký tự!', 'error');
+                return;
+            }
+            
+            setLoading('resetPasswordBtn', 'resetPasswordSpinner', 'resetPasswordText', true);
+            
+            try {
+                const response = await fetch(`${API_URL}/reset-password`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ token, newPassword })
+                });
+
+                const data = await response.json();
+                showResponse('resetPasswordResponse', data);
+
+                if (response.ok && data.success) {
+                    showAlert('resetPasswordAlert', 
+                        '✅ ' + (data.message || 'Mật khẩu đã được đặt lại thành công! Bạn có thể đăng nhập ngay.'), 
+                        'success'
+                    );
+                    
+                    // Clear form
+                    document.getElementById('token').value = '';
+                    document.getElementById('newPassword').value = '';
+                } else {
+                    showAlert('resetPasswordAlert', 
+                        '❌ ' + (data.message || 'Token không hợp lệ hoặc đã hết hạn.'), 
+                        'error'
+                    );
+                }
+            } catch (error) {
+                showAlert('resetPasswordAlert', 
+                    '❌ Lỗi kết nối: ' + error.message + '. Đảm bảo server đang chạy trên http://localhost:5000', 
+                    'error'
+                );
+                showResponse('resetPasswordResponse', { error: error.message });
+            } finally {
+                setLoading('resetPasswordBtn', 'resetPasswordSpinner', 'resetPasswordText', false);
+            }
+        });
+
+        // Show info on load
+        window.addEventListener('load', () => {
+            console.log('%c🧪 Email Test Page Loaded', 'color: #E95211; font-size: 16px; font-weight: bold;');
+            console.log('%cAPI Endpoint: ' + API_URL, 'color: #666;');
+            console.log('%cMake sure your backend server is running on http://localhost:5000', 'color: #666;');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #fff;
+        }
+
+        /* Brands Section - Intro Brand */
+        .intro-brand {
+            position: relative;
+            padding: 6rem 0;
+            z-index: 1;
+            margin-bottom: 8rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            overflow: hidden;
+            min-height: 700px;
+        }
+
+        /* Content Center */
+        .intro-brand-content {
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .intro-brand-content .logo {
+            margin-bottom: 3rem;
+            font-size: 120px;
+            font-weight: 700;
+            color: #ea5a2a;
+            transform: scale(2.2);
+            transition: all 0.3s ease;
+        }
+        
+        .intro-brand-content .logo:hover {
+            transform: scale(2.4);
+        }
+
+       .intro-brand-content .title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    position: relative;
+}
+
+.intro-brand-content .title::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -40px;
+    right: -40px;
+    bottom: -20px;
+    background: radial-gradient(ellipse at center, rgba(234, 90, 42, 0.2) 0%, rgba(234, 90, 42, 0.05) 70%, transparent 100%);
+    border-radius: 50%;
+    z-index: -1;
+    animation: glow-pulse 2.5s ease-in-out infinite;
+    filter: blur(20px);
+}
+
+@keyframes glow-pulse {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+        .intro-brand-content .text {
+            font-size: 14px;
+            font-weight: 400;
+            color: #888;
+            line-height: 1.6;
+        }
+
+        /* Floating Brand Decorations */
+        .intro-brand-decor {
+            position: absolute;
+            background: rgba(255, 179, 135, 0.15);
+            border-radius: 16px;
+            padding: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            z-index: 1;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 179, 135, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .intro-brand-decor:hover {
+            transform: scale(1.2) translateY(-10px) !important;
+            background: rgba(255, 179, 135, 0.28);
+            box-shadow: 0 15px 40px rgba(234, 90, 42, 0.3);
+            border-color: rgba(234, 90, 42, 0.4);
+        }
+
+        .intro-brand-decor img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* ===== BALANCED SYMMETRIC LAYOUT - FB SHOP STYLE ===== */
+
+        .intro-brand-decor.x1 {
+            top: 18%;
+            left: 5%;
+            width: 130px;
+            height: 130px;
+            transform: rotate(-12deg);
+        }
+
+        .intro-brand-decor.x2 {
+            top: 40%;
+            left: 15%;
+            width: 125px;
+            height: 125px;
+            transform: rotate(8deg);
+        }
+
+        .intro-brand-decor.x5 {
+            top: 62%;
+            left: 12%;
+            width: 128px;
+            height: 128px;
+            transform: rotate(-10deg);
+        }
+
+        .intro-brand-decor.x10 {
+            top: 80%;
+            left: 22%;
+            width: 120px;
+            height: 120px;
+            transform: rotate(6deg);
+        }
+
+        .intro-brand-decor.x3 {
+            top: 15%;
+            right: 6%;
+            width: 135px;
+            height: 135px;
+            transform: rotate(10deg);
+        }
+
+        .intro-brand-decor.x6 {
+            top: 38%;
+            right: 14%;
+            width: 130px;
+            height: 130px;
+            transform: rotate(-8deg);
+        }
+
+        .intro-brand-decor.x7 {
+            top: 64%;
+            right: 8%;
+            width: 132px;
+            height: 132px;
+            transform: rotate(12deg);
+        }
+
+        .intro-brand-decor.x9 {
+            top: 78%;
+            right: 18%;
+            width: 125px;
+            height: 125px;
+            transform: rotate(-6deg);
+        }
+
+        /* ===== ANIMATION ===== */
+        @keyframes float-dynamic {
+            0%, 100% {
+                transform: translateY(0px) rotate(var(--rotate));
+            }
+            50% {
+                transform: translateY(-15px) rotate(var(--rotate));
+            }
+        }
+
+        .pulsate-fwd {
+            animation: float-dynamic 3.8s cubic-bezier(0.43, 0.13, 0.23, 0.96) infinite;
+        }
+
+        .intro-brand-decor.x1 {
+            --rotate: -15deg;
+            animation-delay: 0s;
+        }
+
+        .intro-brand-decor.x2 {
+            --rotate: 8deg;
+            animation-delay: 0.2s;
+        }
+
+        .intro-brand-decor.x3 {
+            --rotate: 18deg;
+            animation-delay: 0.1s;
+        }
+
+        .intro-brand-decor.x5 {
+            --rotate: -12deg;
+            animation-delay: 0.4s;
+        }
+
+        .intro-brand-decor.x6 {
+            --rotate: -14deg;
+            animation-delay: 0.3s;
+        }
+
+        .intro-brand-decor.x7 {
+            --rotate: 12deg;
+            animation-delay: 0.5s;
+        }
+
+        .intro-brand-decor.x9 {
+            --rotate: -10deg;
+            animation-delay: 0.6s;
+        }
+
+        .intro-brand-decor.x10 {
+            --rotate: 10deg;
+            animation-delay: 0.35s;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1200px) {
+            .intro-brand {
+                padding: 6rem 0;
+                margin-bottom: 4rem;
+                min-height: 600px;
+            }
+
+            .intro-brand-decor {
+                padding: 12px;
+            }
+
+            .intro-brand-decor.x1 {
+                top: 12%;
+                left: 5%;
+                width: 80px;
+                height: 80px;
+            }
+
+            .intro-brand-decor.x2 {
+                top: 32%;
+                left: 8%;
+                width: 72px;
+                height: 72px;
+            }
+
+            .intro-brand-decor.x3 {
+                top: 18%;
+                right: 6%;
+                width: 82px;
+                height: 82px;
+            }
+
+            .intro-brand-decor.x5 {
+                top: 54%;
+                left: 4%;
+                width: 75px;
+                height: 75px;
+            }
+
+            .intro-brand-decor.x6 {
+                top: 38%;
+                right: 8%;
+                width: 78px;
+                height: 78px;
+            }
+
+            .intro-brand-decor.x7 {
+                top: 58%;
+                right: 5%;
+                width: 80px;
+                height: 80px;
+            }
+
+            .intro-brand-decor.x9 {
+                top: 76%;
+                right: 7%;
+                width: 70px;
+                height: 70px;
+            }
+
+            .intro-brand-decor.x10 {
+                top: 74%;
+                left: 8%;
+                width: 72px;
+                height: 72px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .intro-brand {
+                padding: 4rem 0;
+                margin-bottom: 3rem;
+                min-height: 500px;
+            }
+
+            .intro-brand-content .title {
+                font-size: 28px;
+            }
+
+            .intro-brand-content .text {
+                font-size: 14px;
+            }
+
+            .intro-brand-decor.x2,
+            .intro-brand-decor.x5,
+            .intro-brand-decor.x7,
+            .intro-brand-decor.x9 {
+                display: none;
+            }
+
+            .intro-brand-decor.x1 {
+                top: 15%;
+                left: 5%;
+                width: 70px;
+                height: 70px;
+            }
+
+            .intro-brand-decor.x3 {
+                top: 18%;
+                right: 5%;
+                width: 70px;
+                height: 70px;
+            }
+
+            .intro-brand-decor.x6 {
+                top: 70%;
+                right: 8%;
+                width: 68px;
+                height: 68px;
+            }
+
+            .intro-brand-decor.x10 {
+                top: 72%;
+                left: 8%;
+                width: 68px;
+                height: 68px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .intro-brand {
+                padding: 3rem 0;
+                min-height: 420px;
+            }
+
+            .intro-brand-content .logo {
+                margin-bottom: 1.5rem;
+            }
+
+            .intro-brand-content .title {
+                font-size: 22px;
+                margin-bottom: 0.8rem;
+            }
+
+            .intro-brand-content .text {
+                font-size: 13px;
+            }
+
+            .intro-brand-decor {
+                padding: 10px;
+            }
+
+            .intro-brand-decor.x1,
+            .intro-brand-decor.x3,
+            .intro-brand-decor.x6,
+            .intro-brand-decor.x10 {
+                width: 58px !important;
+                height: 58px !important;
+            }
+
+            .intro-brand-decor.x1 {
+                top: 18%;
+                left: 6%;
+            }
+
+            .intro-brand-decor.x3 {
+                top: 20%;
+                right: 6%;
+            }
+
+            .intro-brand-decor.x6 {
+                bottom: 18%;
+                right: 6%;
+            }
+
+            .intro-brand-decor.x10 {
+                bottom: 16%;
+                left: 6%;
+            }
+        }

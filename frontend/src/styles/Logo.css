@@ -1,0 +1,144 @@
+.logo-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* TT Mark styling */
+.tt-mark {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.t {
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -2px;
+  position: relative;
+}
+
+.first {
+  color: #ff8a56;
+  margin-right: -6px;
+  z-index: 2;
+}
+
+.second {
+  color: #444;
+  z-index: 1;
+}
+
+/* Background oval effect */
+.tt-mark::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 138, 86, 0.15);
+  border-radius: 50%;
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+/* Logo Text */
+.shop-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #444;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 0.9;
+  position: relative;
+  top: -4px;
+  left: 2px;
+  background: linear-gradient(90deg, #444, #666);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+  font-size: 11px;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.5px;
+  margin-top: 3px;
+  font-style: italic;
+}
+
+/* Small size for header use */
+.small .tt-mark {
+  height: 30px;
+}
+
+.small .t {
+  font-size: 28px;
+}
+
+.small .shop-text {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.small .tagline {
+  font-size: 9px;
+}
+
+/* Animation effect */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.shuttlecock {
+  animation: float 2s ease-in-out infinite;
+}
+
+.logo:hover .shuttlecock {
+  animation: float 0.8s ease-in-out infinite;
+}
+
+.logo:hover .t-letter {
+  color: #e67347;
+}
+
+@media (max-width: 576px) {
+  .t-letter {
+    font-size: 28px;
+  }
+
+  .and {
+    font-size: 20px;
+  }
+
+  .shop-text {
+    font-size: 12px;
+  }
+
+  .small .t-letter {
+    font-size: 22px;
+  }
+
+  .small .and {
+    font-size: 16px;
+  }
+
+  .small .shop-text {
+    font-size: 10px;
+  }
+}

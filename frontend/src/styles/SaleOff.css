@@ -1,0 +1,138 @@
+/* Sale Off Section */
+.section-sale-off {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.container-sale {
+  width: 100%;
+  max-width: 1349px;
+  margin: 0 auto;
+  padding: 0 45px;
+}
+
+/* Title Modules - giống font "Sản phẩm mới" */
+.title-modules {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title-modules h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.title-modules h2 a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.title-modules h2 span {
+  color: #ea5a2a;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: 'Lexend', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.title-modules h2 span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #ea5a2a;
+}
+
+/* Row Sale */
+.row-sale {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.col-sale {
+  flex: 1 1 calc(33.333% - 14px);
+  min-width: 300px;
+}
+
+/* Three Banner */
+.three-banner {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.three-banner:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(234, 90, 42, 0.3);
+}
+
+.three-banner a {
+  display: block;
+  text-decoration: none;
+}
+
+.three-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.three-banner:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .col-sale {
+    flex: 1 1 calc(50% - 10px);
+  }
+  
+  .container-sale {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-sale-off {
+    padding: 40px 0;
+  }
+  
+  .title-modules h2 span {
+    font-size: 24px;
+  }
+  
+  .col-sale {
+    flex: 1 1 100%;
+  }
+  
+  .container-sale {
+    padding: 0 20px;
+  }
+  
+  .row-sale {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .title-modules {
+    margin-bottom: 30px;
+  }
+  
+  .title-modules h2 span {
+    font-size: 22px;
+  }
+  
+  .three-banner {
+    border-radius: 6px;
+  }
+}

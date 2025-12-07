@@ -1,0 +1,522 @@
+/* Profile Page Styles */
+.page_customer_account {
+  padding: 20px 0;
+}
+
+.account-page {
+  background-color: #f8f9fa;
+  min-height: 70vh;
+}
+
+/* Bootstrap Grid for Profile Layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  align-items: flex-start; /* Căn đầu các cột ngang hàng */
+}
+
+.col-xs-12,
+.col-sm-12,
+.col-md-3,
+.col-md-9,
+.col-lg-3,
+.col-lg-9,
+.col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.col-xs-12 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-3 {
+    width: 25%;
+    order: 1; /* Sidebar ở bên trái */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .col-md-9 {
+    width: 75%;
+    order: 2; /* Main content ở bên phải */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .col-lg-3 {
+    width: 25%;
+    order: 1; /* Sidebar ở bên trái */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .col-lg-9 {
+    width: 75%;
+    order: 2; /* Main content ở bên phải */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .col-lg-12 {
+    width: 100%;
+    order: 0; /* Header luôn ở trên */
+  }
+  
+  /* Đảm bảo các cột có cùng chiều cao và ngang hàng */
+  .page_customer_account .row {
+    align-items: stretch; /* Kéo dài các cột bằng nhau */
+  }
+}
+
+.mr-bottom-20 {
+  margin-bottom: 20px;
+}
+
+/* Page Title */
+.page-title {
+  margin-bottom: 20px;
+}
+
+.title-head {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.widget-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Welcome Message */
+.form-signup p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #666;
+}
+
+.form-signup b {
+  color: #E95221 !important;
+  font-weight: 600;
+}
+
+/* Customer Info Block */
+.block-account {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 300px; /* Đảm bảo có chiều cao tối thiểu để nút căn chỉnh đẹp */
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.block-title {
+  background: #E95221;
+  padding: 15px 20px;
+  margin: 0;
+}
+
+.block-title .widget-title {
+  color: white;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.divider-full-1 {
+  height: 1px;
+  background: #eee;
+  margin: 0;
+}
+
+.block-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.block-edit-padding {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between; /* Căn đều các phần tử */
+}
+
+/* Customer Info Items */
+.block-content p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.block-content p:last-of-type {
+  margin-bottom: 20px;
+}
+
+.block-content p svg {
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.block-content p b {
+  color: #333;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+/* Edit Button */
+.margin-top-20 {
+  margin-top: auto; /* Đẩy nút xuống cuối khung */
+  padding-top: 20px;
+}
+
+.btn {
+  display: block;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 0; /* Loại bỏ margin mặc định */
+}
+
+.btn-blues {
+  background-color: #E95221;
+  color: white;
+}
+
+.btn-blues:hover {
+  background-color: #d44710;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-full {
+  width: 100%;
+  box-sizing: border-box; /* Đảm bảo padding được tính trong width */
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+/* Orders Section */
+.col-right-ac {
+  padding-left: 15px;
+}
+
+.margin-top-0 {
+  margin-top: 0 !important;
+}
+
+
+
+.my-account {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.dashboard {
+  width: 100%;
+}
+
+.recent-orders {
+  overflow-x: auto;
+}
+
+/* Table Styles */
+.table-responsive-block {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.table-order {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.table-order th,
+.table-order td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.table-order th {
+  background-color: #f8f9fa;
+  color: #333;
+  font-weight: 600;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table-order tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.table-order .text-center {
+  text-align: center;
+}
+
+.table-order .text-center p {
+  margin: 20px 0;
+  color: #666;
+  font-style: italic;
+}
+
+/* Order Link */
+.order-link {
+  color: #E95221;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.order-link:hover {
+  color: #d44710;
+  text-decoration: underline;
+}
+
+/* Price */
+.price {
+  font-weight: 600;
+  color: #E95221;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.status-confirmed {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+.status-shipping {
+  background-color: #cce7ff;
+  color: #004085;
+  border: 1px solid #99d6ff;
+}
+
+.status-completed {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f1b0b7;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .col-md-3,
+  .col-md-9,
+  .col-lg-3,
+  .col-lg-9 {
+    width: 100%;
+    order: unset;
+  }
+  
+  /* Trên mobile, sidebar hiển thị trước main content */
+  .col-md-3,
+  .col-lg-3 {
+    order: 1;
+  }
+  
+  .col-md-9,
+  .col-lg-9 {
+    order: 2;
+  }
+  
+  .page_customer_account .row > div {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .title-head {
+    font-size: 24px;
+  }
+  
+  .block-content {
+    padding: 15px;
+  }
+  
+  .table-order {
+    font-size: 12px;
+  }
+  
+  .table-order th,
+  .table-order td {
+    padding: 8px 10px;
+  }
+  
+  .my-account {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page_customer_account {
+    padding: 10px 0;
+  }
+  
+  .title-head {
+    font-size: 20px;
+  }
+  
+  .form-signup p {
+    font-size: 14px;
+  }
+  
+  .block-content p {
+    font-size: 13px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .block-content p svg {
+    margin-right: 0;
+    margin-bottom: 3px;
+  }
+  
+  /* Stack table on mobile */
+  .table-responsive-block {
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+  }
+  
+  .table-order thead {
+    display: none;
+  }
+  
+  .table-order,
+  .table-order tbody,
+  .table-order tr,
+  .table-order td {
+    display: block;
+    width: 100%;
+  }
+  
+  .table-order tr {
+    border: 1px solid #dee2e6;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    padding: 10px;
+    background: white;
+  }
+  
+  .table-order td {
+    border: none;
+    padding: 5px 0;
+    position: relative;
+    padding-left: 50% !important;
+  }
+  
+  .table-order td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 6px;
+    width: 45%;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Add data labels for mobile */
+  .table-order td:nth-of-type(1):before { content: "Đơn hàng: "; }
+  .table-order td:nth-of-type(2):before { content: "Ngày: "; }
+  .table-order td:nth-of-type(3):before { content: "Địa chỉ: "; }
+  .table-order td:nth-of-type(4):before { content: "Giá trị: "; }
+  .table-order td:nth-of-type(5):before { content: "Tình trạng: "; }
+}
+
+/* ===== CUSTOM: Nút Sửa thông tin ở giữa ===== */
+.margin-top-20 > a[href="/profile/edit"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: auto !important;
+  min-width: 200px !important;
+  max-width: 300px !important;
+  margin: 9 auto !important;
+  padding: 12px 30px !important;
+  background-color: #E95211 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  text-align: center !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 4px rgba(233, 82, 17, 0.2) !important;
+  cursor: pointer !important;
+}
+
+.margin-top-20 > a[href="/profile/edit"]:hover {
+  background-color: #d14410 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 8px rgba(233, 82, 17, 0.3) !important;
+  text-decoration: none !important;
+}
+
+/* Container của nút phải center */
+.margin-top-20 {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin-top: 20px !important;
+}

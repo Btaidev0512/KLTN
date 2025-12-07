@@ -1,0 +1,435 @@
+/* Edit Profile Page Styles */
+.page_customer_account {
+  padding: 20px 0;
+  margin-bottom: 30px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 45px;
+  padding-left: 45px;
+  max-width: 1349px;
+  font-size: 14px;
+  color: #333e44;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.7;
+}
+
+.page-login {
+  margin-bottom: 20px;
+}
+
+.mr-20 {
+  margin-bottom: 20px;
+}
+
+.text-centers {
+  text-align: center;
+}
+
+.title-head {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.margin-top-0 {
+  margin-top: 0 !important;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn-blues {
+  background-color: #FF6B35;
+  color: white;
+}
+
+.btn-blues:hover {
+  background-color: #d44710;
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(255, 107, 53, 0.3);
+}
+
+.btn-style {
+  background-color: #FF6B35;
+  color: white;
+  border: 2px solid #FF6B35;
+  padding: 14px 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 16px;
+  min-width: 250px;
+}
+
+.btn-style:hover {
+  background-color: #d44710;
+  border-color: #d44710;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 107, 53, 0.3);
+}
+
+.btn-style:disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Panel Styles */
+.panel {
+  margin-bottom: 40px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.panel-primary {
+  border-color: #FF6B35;
+}
+
+.panel-heading {
+  padding: 20px 25px;
+  background-color: #FF6B35;
+  border-bottom: 1px solid #FF6B35;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+.panel-heading h4 {
+  color: #fff;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.panel-body {
+  padding: 30px 25px;
+}
+
+.panel-footer {
+  padding: 25px 25px;
+  background-color: #fafafa;
+  border-top: 1px solid #e5e5e5;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group-lg {
+  margin-bottom: 30px;
+}
+
+.box_text {
+  margin-bottom: 25px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form-control:focus {
+  border-color: #FF6B35;
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.form-control:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Labels */
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-control:focus {
+  border-color: #FF6B35;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(233,82,17,.6);
+}
+
+.form-control[disabled] {
+  background-color: #eee;
+  opacity: 1;
+}
+
+.form-control-lg {
+  padding: 15px 20px;
+  font-size: 16px;
+}
+
+/* Labels */
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.control-label {
+  padding-top: 12px;
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.error {
+  color: #d9534f;
+}
+
+/* Grid System */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-lg-2,
+.col-lg-3,
+.col-lg-8,
+.col-lg-9,
+.col-md-4,
+.col-md-8,
+.col-sm-6 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+  .col-lg-1 {
+    width: 8.33333333%;
+  }
+  .col-lg-2 {
+    width: 16.66666667%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  .col-lg-8 {
+    width: 66.66666667%;
+  }
+  .col-lg-9 {
+    width: 75%;
+  }
+  .col-lg-10 {
+    width: 83.33333333%;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md-4 {
+    width: 33.33333333%;
+  }
+  .col-md-8 {
+    width: 66.66666667%;
+  }
+}
+
+@media (min-width: 576px) {
+  .col-sm-6 {
+    width: 50%;
+  }
+}
+
+/* Birthday Picker */
+.birth-date-wrapper {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.birth-select {
+  flex: 1;
+  padding: 14px 18px;
+  font-size: 15px;
+  color: #555;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  cursor: pointer;
+  min-width: 0; /* Allow flex items to shrink below content size */
+}
+
+.birth-select:focus {
+  border-color: #FF6B35;
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+/* Ensure equal width for all three selects */
+.birth-date-wrapper .birth-select:nth-child(1) {
+  flex: 1.2; /* Month - slightly wider for text */
+}
+
+.birth-date-wrapper .birth-select:nth-child(2) {
+  flex: 1; /* Day */
+}
+
+.birth-date-wrapper .birth-select:nth-child(3) {
+  flex: 1.2; /* Year - wider for 4 digits */
+}
+
+/* Form Group Addon */
+.form-group-addon {
+  display: block;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  margin-right: -1px;
+  float: left;
+}
+
+.form-group-addon + .form-control {
+  border-radius: 0 4px 4px 0;
+  padding-left: 50px;
+}
+
+/* Submit Wrapper */
+.wrap-submit {
+  text-align: center;
+}
+
+/* Alert Messages */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .control-label {
+    text-align: left;
+    padding-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .birth-date-wrapper {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .birth-select {
+    width: 100%;
+  }
+  
+  .birth-date-wrapper .birth-select:nth-child(1),
+  .birth-date-wrapper .birth-select:nth-child(2),
+  .birth-date-wrapper .birth-select:nth-child(3) {
+    flex: 1;
+  }
+}
+
+/* Alert Messages */
+.alert {
+  padding: 12px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .page_customer_account {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  .panel-body {
+    padding: 15px;
+  }
+  
+  .panel-heading {
+    padding: 12px 15px;
+  }
+  
+  .panel-footer {
+    padding: 12px 15px;
+  }
+}

@@ -1,0 +1,396 @@
+/* Hero Banner Section */
+.hero-banner-section {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background: #000;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Cải thiện chất lượng render */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.carousel-item.active {
+  z-index: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 100%);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.carousel-overlay .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.carousel-overlay .row {
+  display: flex;
+  align-items: center;
+  min-height: 600px;
+}
+
+.carousel-overlay .col-lg-6 {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Banner Content */
+.banner-content {
+  color: white;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-sale-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0);
+  }
+}
+
+.sale-text {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.sale-percent {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #FFD700;
+  text-shadow: 0 2px 10px rgba(255,215,0,0.5);
+}
+
+.banner-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+  background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.banner-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+  opacity: 0.95;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+}
+
+.banner-btn {
+  display: inline-block;
+  padding: 18px 45px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.banner-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #F7931E 0%, #FF6B35 100%);
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.banner-btn:hover::before {
+  left: 0;
+}
+
+.banner-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(255, 107, 53, 0.6);
+  color: #fff;
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 300;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-control-prev {
+  left: 30px;
+}
+
+.carousel-control-next {
+  right: 30px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.carousel-indicators button.active {
+  background: white;
+  width: 40px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.carousel-indicators button:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-banner-section {
+    height: 500px;
+  }
+
+  .carousel-overlay .row {
+    min-height: 500px;
+  }
+
+  .banner-title {
+    font-size: 2.5rem;
+  }
+
+  .banner-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .banner-btn {
+    padding: 15px 35px;
+    font-size: 14px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+
+  .carousel-control-prev {
+    left: 15px;
+  }
+
+  .carousel-control-next {
+    right: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner-section {
+    height: 450px;
+  }
+
+  .carousel-overlay .row {
+    min-height: 450px;
+    text-align: center;
+  }
+
+  .carousel-overlay .col-lg-6 {
+    max-width: 100%;
+  }
+
+  .banner-title {
+    font-size: 2rem;
+  }
+
+  .banner-subtitle {
+    font-size: 1rem;
+  }
+
+  .banner-btn {
+    padding: 12px 30px;
+    font-size: 13px;
+  }
+
+  .hero-sale-tag {
+    padding: 6px 15px;
+  }
+
+  .sale-text {
+    font-size: 12px;
+  }
+
+  .sale-percent {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-banner-section {
+    height: 400px;
+  }
+
+  .carousel-overlay .row {
+    min-height: 400px;
+  }
+
+  .banner-title {
+    font-size: 1.5rem;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .carousel-control-prev {
+    left: 10px;
+  }
+
+  .carousel-control-next {
+    right: 10px;
+  }
+
+  .carousel-indicators {
+    bottom: 20px;
+  }
+
+  .carousel-indicators button {
+    width: 8px;
+    height: 8px;
+  }
+
+  .carousel-indicators button.active {
+    width: 30px;
+  }
+}
